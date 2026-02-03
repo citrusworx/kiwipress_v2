@@ -1,7 +1,9 @@
 import { MediaAdapter } from "../media/media";
 
+export type Currency = string & {__currencyBrand: never};
+
 export type Money = {
-    currency: string;
+    currency: Currency;
     amount: number;
 }
 
@@ -15,12 +17,3 @@ export interface ProductAdapter {
     images: MediaAdapter[];
     metadata: Record<string, unknown>;
 }
-
-// Demo Money instance
-
-const moneyObj: Money = {
-    currency: "USD",
-    amount: 236200
-}
-
-console.log(`$${moneyObj.amount}`);
