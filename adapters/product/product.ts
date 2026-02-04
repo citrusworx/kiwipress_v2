@@ -17,3 +17,11 @@ export interface ProductAdapter {
     images: MediaAdapter[];
     metadata: Record<string, unknown>;
 }
+
+export interface ProductVariantAdapter {
+    id: string;
+    productId: string;
+    sku?: string;
+    attributes: Record<string, string>; // size, color, etc.
+    inventory?: number;
+}

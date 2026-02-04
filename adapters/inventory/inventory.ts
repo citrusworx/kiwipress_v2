@@ -3,4 +3,5 @@ export interface InventoryAdapter {
     qtyOnHand: number;
     qtyOnOrder: number;
     backorder?: boolean;
+    location?: string;
 }

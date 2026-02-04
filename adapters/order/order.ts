@@ -7,3 +7,10 @@ export interface OrderAdapter {
     status: "pending" | "paid" | "fulfilled" | "cancelled" | "refunded"
     total: Money;
 }
+
+export interface FullFilmentAdapter {
+    orderId: string;
+    carrier?: string;
+    trackingNumber: string;
+    status: "pending" | "picked" | "shipped" | "delayed" | "delivered" | "returned";
+}
