@@ -1,0 +1,10 @@
+pricing:
+  id:
+    type: id
+  type: enum["sale", "discount", "bulk", "subscription", loyalty]
+  appliesTo: string[]
+  effect:
+    type: enum["percentage", "fixed"]
+    amount: number
+  conditions:
+    type: map

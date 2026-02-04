@@ -1,0 +1,26 @@
+product:
+  type: entity
+  fields:
+    id:
+      type: id
+    title:
+      content: string
+      required: true
+    description:
+      content: richtext
+      required: true
+    price:
+      currency: enum[USD, EUR, GBP, JPY]
+      amount: int
+    images:
+      content: media[]
+      required: true
+    sku: 
+      id: string
+      required: false
+    specification:
+      content: string
+      required: false
+    metadata:
+      type: map
+      required: false
