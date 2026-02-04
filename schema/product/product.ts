@@ -1,15 +1,13 @@
-import z from 'zod';
+import { z } from 'zod';
 
-const schema = z;
-
-schema.object({
-    id: schema.string(),
-    title: schema.string(),
-    description: schema.string(),
-    slug: schema.string(),
-    price: schema.number(), // MoneySchema
-    images: schema.array(schema.string()), // MediaSchema
-    sku: schema.string().optional(),
-    specification: schema.string().optional(),
-    metadata: schema.record(schema.string(), schema.unknown()).optional()
-})
+export const ProductSchema = z.object({
+    id: z.string(),
+    title: z.string(),
+    description: z.string(), // TODO: DocumentSchema
+    slug: z.string(),
+    price: z.any(), //TODO:  MoneySchema
+    images: z.array(z.unknown()), // TODO:  MediaSchema
+    sku: z.string().optional(),
+    specification: z.string().optional(),
+    metadata: z.record(z.string(), z.unknown()).optional()
+});
