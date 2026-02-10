@@ -1,6 +1,6 @@
 import { MediaAdapter } from "../media/media";
 
-export type Currency = string & {__currencyBrand: never};
+export type Currency = string;
 
 export type Money = {
     currency: Currency;
